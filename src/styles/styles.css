@@ -1,4 +1,17 @@
-@import "https://fonts.googleapis.com/css?family=Ubuntu:300,400,500";
+/*@import "https://fonts.googleapis.com/css?family=Ubuntu:300,400,500";*/
+
+@font-face {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../assets/fonts/ubuntu-300.woff') format('woff2'),
+	url('../assets/fonts/ubuntu-300.woff') format('woff'),
+	url('../assets/fonts/ubuntu-regular.woff') format('woff'),
+	url('../assets/fonts/ubuntu-regular.woff') format('woff2');
+
+
+	
+}	
 
 html {
 	font-family: sans-serif;

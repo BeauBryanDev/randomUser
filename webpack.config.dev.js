@@ -3,12 +3,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const dotenv = require('dotenv-webpack');
+const BundleAnalyzer = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const { watch } = require('fs');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
 
     mode: 'development',
-    watch:   true,
+    //watch:   true,
+    devtool: "source-map",
 
     entry: './src/index.js',
     output: {
@@ -94,6 +97,16 @@ module.exports = {
 
         }),
         new dotenv(),
+        new BundleAnalyzer(),
+        new CleanWebpackPlugin(),
     ],
+    devServer: {
+        static: path.join(__dirname, 'dist'),
+        compress: true,
+        historyApiFallback: true,
+        port: 3006,
+        open: true,
+    
+    }
 
 }

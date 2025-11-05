@@ -17,7 +17,7 @@ const Template = async () => {
             </svg>
           </div>
           <p class="card_title">Hi, My name is</p>
-          <p class="card_value">${data.name.first} ${data.name.last}</p>
+          <p class="card_value">${data.name.first} plus ${data.name.last}</p>
         </div>
         <div class="card_userdata">
           <ul>
